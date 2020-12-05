@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="static/style.css">
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h1 style="color:rgb(245,245,245)">Welcome to the Movie recommender System</h1>
+  <br>
+  <br>
+  <h3 style="color:rgb(245,245,245)">Enter the movie you like to get recommendations.</h3>
+</div>
+<div classname="moviebox">
+  <form action="{{url_for('recommend')}}">
+    <input   type="text" name="movie" class="form-control" placeholder="Enter Movie name here">
+    <br>
+    <br>
+    <input type="submit" class="btn btn-info" value="Enter">
+  </form>
+
+</div>
+{% endblock %}
